@@ -52,17 +52,6 @@ Please submit the following via a public GitHub repository or a downloadable ZIP
 5. Cleanup confirmation: Note stating all AWS resources have been torn down.
 6. (Optional) Terraform code if infrastructure was provisioned via IaC.
 
-## Assessment Rubric (100 Points)
-
-| Area | Points |
-|------|--------|
-| Correct ECR setup and image push | 15 |
-| EC2 setup, Docker installed, services running via Compose | 20 |
-| ALB + Target Groups working, endpoints responsive | 25 |
-| Clear, complete documentation (README + diagram) | 10 |
-| Reliable endpoint verification script | 10 |
-| Bonus: Launch Template + ASG working with scale-out | 30 |
-
 Note: Partial credit will be given for near-complete solutions. Well-structured, commented Terraform code may earn additional credit within the bonus.
 
 ## Getting Started
