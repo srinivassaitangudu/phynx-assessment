@@ -1,0 +1,18 @@
+# File used on EC2 instances (deliverable).
+# Replace <ACCOUNT>.dkr.ecr.<REGION>.amazonaws.com with your ECR registry URI.
+version: '3.8'
+
+services:
+  service1:
+    image: <ACCOUNT>.dkr.ecr.<REGION>.amazonaws.com/service1:latest
+    ports:
+      - "5000:5000"
+    environment:
+      - FLASK_ENV=production
+
+  service2:
+    image: <ACCOUNT>.dkr.ecr.<REGION>.amazonaws.com/service2:latest
+    ports:
+      - "5001:5001"
+    environment:
+      - FLASK_ENV=production

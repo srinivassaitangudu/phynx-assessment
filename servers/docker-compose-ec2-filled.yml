@@ -1,0 +1,20 @@
+# EC2 deployment: use ECR image URIs (no build).
+# Replace YOUR_ACCOUNT and YOUR_REGION with your AWS account ID and region, e.g.:
+#   123456789012.dkr.ecr.us-east-1.amazonaws.com
+# Or set ECR_URI when copying to EC2 and use: image: ${ECR_URI}/service1:latest
+version: '3.8'
+
+services:
+  service1:
+    image: 578046515271.dkr.ecr.us-east-1.amazonaws.com/service1:latest
+    ports:
+      - "5000:5000"
+    environment:
+      - FLASK_ENV=production
+
+  service2:
+    image: 578046515271.dkr.ecr.us-east-1.amazonaws.com/service2:latest
+    ports:
+      - "5001:5001"
+    environment:
+      - FLASK_ENV=production
