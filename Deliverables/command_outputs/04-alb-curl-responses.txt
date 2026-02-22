@@ -1,0 +1,6 @@
+]633;E;{   echo "ALB DNS: devops-alb-xxxx.us-east-1.elb.amazonaws.com"\x3b   echo "--- /service1 ---"\x3b   curl -s http://devops-alb-1103791012.us-east-1.elb.amazonaws.com/service1\x3b   echo ""\x3b   echo "--- /service2 ---"\x3b   curl -s http://devops-alb-1103791012.us-east-1.elb.amazonaws.com/service2\x3b } > screenshots/command_outputs/04-alb-curl-responses.txt;bf3dba81-ea65-47fa-810f-eabe72252ece]633;CALB DNS: devops-alb-xxxx.us-east-1.elb.amazonaws.com
+--- /service1 ---
+{"message":"Hello from Service 1","user_info":"No user info provided"}
+
+--- /service2 ---
+{"message":"Hello from Service 2","user_info":"No user info provided"}

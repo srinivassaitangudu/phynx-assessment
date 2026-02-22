@@ -1,6 +1,0 @@
-# Add here:
-# - 01-ecr-repositories.png (or .txt with aws ecr describe-repositories output)
-# - 02-docker-ps-instance1.png
-# - 03-docker-ps-instance2.png
-# - 04-alb-curl-service1-service2.png (or terminal output)
-# - 05-asg-activity.png (optional, if bonus done)

@@ -1,0 +1,14 @@
+aws ecr describe-repositories --repository-names service1 service2 --region us-east-1 --query 'repositories[*].[repositoryName,repositoryUri]' --output table > screenshots/command_outputs/01-ecr.txt
+
+ssh -i ~/.ssh/phynx-key.pem ubuntu@$IP1 'sudo docker ps --format "table {{.Names}}\t{{.Status}}\t{{.Ports}}"' > screenshots/command_outputs/02-docker-ps-instance1.txt
+
+ssh -i ~/.ssh/phynx-key.pem ubuntu@$IP2 'sudo docker ps --format "table {{.Names}}\t{{.Status}}\t{{.Ports}}"' > screenshots/command_outputs/03-docker-ps-instance2.txt
+
+{
+  echo "ALB DNS: devops-alb-xxxx.us-east-1.elb.amazonaws.com"
+  echo "--- /service1 ---"
+  curl -s http://devops-alb-1103791012.us-east-1.elb.amazonaws.com/service1
+  echo ""
+  echo "--- /service2 ---"
+  curl -s http://devops-alb-1103791012.us-east-1.elb.amazonaws.com/service2
+} > screenshots/command_outputs/04-alb-curl-responses.txt
